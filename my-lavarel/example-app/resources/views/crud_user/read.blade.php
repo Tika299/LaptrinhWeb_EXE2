@@ -11,6 +11,7 @@
                     <th>Email</th>
                     <th>Like</th>
                     <th>Facebook</th>
+                    <th>Avatar</th>
                     <th>Thao tác</th>
                 </tr>
             </thead>
@@ -21,6 +22,7 @@
                     <td>{{$messi->email}}</td>
                     <td>{{$messi->like}}</td>
                     <td>{{$messi->facebook}}</td>
+                    <td>{{$messi->avatar}}</td>
                 </tr>
             </tbody>
         </table>

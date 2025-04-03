@@ -11,6 +11,7 @@
                     <th>Email</th>
                     <th>Like</th>
                     <th>Facebook</th>
+                    <th>Avatar</th>
                     <th>Thao tác</th>
                 </tr>
             </thead>
@@ -23,6 +24,7 @@
                         <th>{{ $user->email }}</th>
                         <th>{{ $user->like }}</th>
                         <th>{{ $user->facebook }}</th>
+                        <th>{{ $user->avatar }}</th>
                         <th>
                             <a href="{{ route('user.readUser', ['id' => $user->id]) }}">View</a> |
                             <a href="{{ route('user.updateUser', ['id' => $user->id]) }}">Edit</a> |

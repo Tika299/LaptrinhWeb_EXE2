@@ -54,6 +54,13 @@
                 <span class="text-danger">{{ $errors->first('facebook') }}</span>
                 @endif
             </div>
+            <div class="mb-3">
+                <label for="avatar" class="form-label">Avatar</label>
+                <input class="form-control" type="file" id="formFile" name="avatar" require autofocus>
+                @if ($errors->has('avatar'))
+                <span class="text-danger">{{ $errors->first('avatar') }}</span>
+                @endif
+            </div>
             <div class="btn_group">
                 <button type="submit" class="btn btn-primary">Chỉnh sửa</button>
             </div>
