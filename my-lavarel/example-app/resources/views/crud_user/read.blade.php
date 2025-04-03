@@ -9,6 +9,8 @@
                     <th>#</th>
                     <th>UserName</th>
                     <th>Email</th>
+                    <th>Like</th>
+                    <th>Facebook</th>
                     <th>Thao tác</th>
                 </tr>
             </thead>
@@ -17,6 +19,8 @@
                     <td>{{$messi->id}}</td>
                     <td>{{$messi->name}}</td>
                     <td>{{$messi->email}}</td>
+                    <td>{{$messi->like}}</td>
+                    <td>{{$messi->facebook}}</td>
                 </tr>
             </tbody>
         </table>

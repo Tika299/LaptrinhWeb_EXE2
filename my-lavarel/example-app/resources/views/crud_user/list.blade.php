@@ -9,6 +9,8 @@
                     <th>#</th>
                     <th>UserName</th>
                     <th>Email</th>
+                    <th>Like</th>
+                    <th>Facebook</th>
                     <th>Thao tác</th>
                 </tr>
             </thead>
@@ -19,6 +21,8 @@
                         <th>{{ $user->id }}</th>
                         <th>{{ $user->name }}</th>
                         <th>{{ $user->email }}</th>
+                        <th>{{ $user->like }}</th>
+                        <th>{{ $user->facebook }}</th>
                         <th>
                             <a href="{{ route('user.readUser', ['id' => $user->id]) }}">View</a> |
                             <a href="{{ route('user.updateUser', ['id' => $user->id]) }}">Edit</a> |

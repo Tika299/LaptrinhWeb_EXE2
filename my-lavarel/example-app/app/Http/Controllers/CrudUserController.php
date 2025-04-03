@@ -59,13 +59,17 @@ class CrudUserController extends Controller
             'name' => 'required',
             'email' => 'required|email|unique:users',
             'password' => 'required|min:6',
+            'like' => 'required',
+            'facebook' => 'required'
         ]);
 
         $data = $request->all();
         $check = User::create([
             'name' => $data['name'],
             'email' => $data['email'],
-            'password' => Hash::make($data['password'])
+            'password' => Hash::make($data['password']),
+            'like' => $data['like'],
+            'facebook' => $data['facebook']
         ]);
 
         return redirect("login");
@@ -113,12 +117,16 @@ class CrudUserController extends Controller
             'name' => 'required',
             'email' => 'required|email|unique:users,id,'.$input['id'],
             'password' => 'required|min:6',
+            'like' => 'required',
+            'facebook' => 'required'
         ]);
 
        $user = User::find($input['id']);
        $user->name = $input['name'];
        $user->email = $input['email'];
        $user->password = $input['password'];
+       $user->like = $input['like'];
+       $user->facebook = $input['facebook'];
        $user->save();
 
         return redirect("list")->withSuccess('You have signed-in');

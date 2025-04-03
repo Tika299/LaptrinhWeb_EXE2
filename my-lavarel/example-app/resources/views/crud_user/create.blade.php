@@ -34,6 +34,22 @@
                     <span class="text-danger">{{ $errors->first('email') }}</span>
                     @endif
                 </div>
+                <div class="mb-3">
+                    <label for="like" class="form-label">Like</label>
+                    <input type="like" class="form-control" id="like"
+                        name="like" required autofocus>
+                    @if ($errors->has('like'))
+                    <span class="text-danger">{{ $errors->first('like') }}</span>
+                    @endif
+                </div>
+                <div class="mb-3">
+                    <label for="facebook" class="form-label">Facebook</label>
+                    <input type="facebook" class="form-control" id="facebook"
+                        name="facebook" required autofocus>
+                    @if ($errors->has('facebook'))
+                    <span class="text-danger">{{ $errors->first('facebook') }}</span>
+                    @endif
+                </div>
                 <div class="btn_group">
                     <a role="button" href="{{ route('login') }}" class="btn text-primary-emphasis">Đã có tài khoản</a>
                     <button type="submit" class="btn btn-primary">Đăng ký</button>
