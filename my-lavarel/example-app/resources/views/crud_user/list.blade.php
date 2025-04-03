@@ -18,20 +18,22 @@
             <tbody>
                 <tr>
                     @foreach($users as $user)
-                    <tr>
-                        <th>{{ $user->id }}</th>
-                        <th>{{ $user->name }}</th>
-                        <th>{{ $user->email }}</th>
-                        <th>{{ $user->like }}</th>
-                        <th>{{ $user->facebook }}</th>
-                        <th>{{ $user->avatar }}</th>
-                        <th>
-                            <a href="{{ route('user.readUser', ['id' => $user->id]) }}">View</a> |
-                            <a href="{{ route('user.updateUser', ['id' => $user->id]) }}">Edit</a> |
-                            <a href="{{ route('user.deleteUser', ['id' => $user->id]) }}">Delete</a>
-                        </th>
-                    </tr>
-                    @endforeach
+                <tr>
+                    <th>{{ $user->id }}</th>
+                    <th>{{ $user->name }}</th>
+                    <th>{{ $user->email }}</th>
+                    <th>{{ $user->like }}</th>
+                    <th>{{ $user->facebook }}</th>
+                    <th>
+                        <img src="{{ asset('storage/' . $user->avatar) }}" alt="{{ $user->name }}" style="width: 200px; height: 200px; object-fit: cover;">
+                    </th>
+                    <th>
+                        <a href="{{ route('user.readUser', ['id' => $user->id]) }}">View</a> |
+                        <a href="{{ route('user.updateUser', ['id' => $user->id]) }}">Edit</a> |
+                        <a href="{{ route('user.deleteUser', ['id' => $user->id]) }}">Delete</a>
+                    </th>
+                </tr>
+                @endforeach
                 </tr>
             </tbody>
         </table>

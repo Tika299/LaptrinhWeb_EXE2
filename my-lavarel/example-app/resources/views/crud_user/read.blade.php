@@ -22,7 +22,9 @@
                     <td>{{$messi->email}}</td>
                     <td>{{$messi->like}}</td>
                     <td>{{$messi->facebook}}</td>
-                    <td>{{$messi->avatar}}</td>
+                    <td>
+                        <img src="{{ asset('storage/' . $messi->avatar) }}" alt="{{ $messi->name }}" style="width: 200px; height: 200px; object-fit: cover;">
+                    </td>
                 </tr>
             </tbody>
         </table>
